@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Main page
+{% endblock title %}
+
+{% block content %}
+<form action='' method="POST" class="ui form" entype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="ui button primary">Start upload</button>
+</form>
+{% endblock content %}
